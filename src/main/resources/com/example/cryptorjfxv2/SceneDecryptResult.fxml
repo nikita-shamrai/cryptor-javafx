@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneResult" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cryptorjfxv2.ControllerDecryptResult">
+   <children>
+      <TextField fx:id="decryptOffsetKey" disable="true" layoutX="272.0" layoutY="417.0" prefHeight="25.0" prefWidth="46.0">
+         <font>
+            <Font name="Courier" size="13.0" />
+         </font></TextField>
+      <Text fx:id="variantsLabel1" layoutX="240.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Several variants?">
+         <font>
+            <Font name="Courier" size="13.0" />
+         </font></Text>
+      <Label alignment="CENTER" layoutX="11.0" layoutY="17.0" prefHeight="17.0" prefWidth="722.0" text="RESULT">
+         <font>
+            <Font name="Courier" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="backFromDeryptResultButton" layoutX="76.0" layoutY="399.0" mnemonicParsing="false" onAction="#switchBackToSceneOfDecrypt" prefHeight="39.0" prefWidth="83.0" text="Back">
+         <font>
+            <Font name="Courier" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="writeInFileButton" layoutX="492.0" layoutY="402.0" mnemonicParsing="false" onAction="#writeInFile" prefHeight="39.0" prefWidth="178.0" text="Choose folder">
+         <font>
+            <Font name="Courier" size="19.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="decryptResultTextArea" layoutX="67.0" layoutY="77.0" prefHeight="279.0" prefWidth="608.0" wrapText="true">
+         <font>
+            <Font name="Courier" size="13.0" />
+         </font></TextArea>
+      <Label layoutX="471.0" layoutY="378.0" prefHeight="26.0" prefWidth="220.0" text="Write result in TXT File">
+         <font>
+            <Font name="Courier" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="resultOffsetKeyChooseButton" disable="true" layoutX="322.0" layoutY="419.0" mnemonicParsing="false" onAction="#filterResultByButton" text="Select">
+         <font>
+            <Font name="Courier" size="13.0" />
+         </font></Button>
+      <Line endX="533.1397094726562" layoutX="162.0" layoutY="47.0" startX="-100.0" />
+      <Text fx:id="variantsLabel2" layoutX="241.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter index of correct">
+         <font>
+            <Font name="Courier" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

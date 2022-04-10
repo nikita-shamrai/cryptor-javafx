@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cryptorjfxv2.Controller1">
+   <children>
+      <Label alignment="CENTER" layoutY="9.0" prefHeight="17.0" prefWidth="722.0" text="Welocme to CRYPTOR">
+         <font>
+            <Font name="Courier" size="26.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="34.0" layoutY="58.0" prefHeight="47.0" prefWidth="645.0" text="This software crypts and decrypts provided text TXT files in English or Russian using Ceaser crypting method." wrapText="true">
+         <font>
+            <Font name="Courier" size="15.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="selectFileButton" layoutX="264.0" layoutY="141.0" mnemonicParsing="false" onAction="#selectFile" text="Select TXT File">
+         <font>
+            <Font name="Courier" size="19.0" />
+         </font>
+      </Button>
+      <Label fx:id="fileList" alignment="CENTER" contentDisplay="CENTER" layoutX="295.0" layoutY="187.0" prefHeight="20.0" prefWidth="136.0" text="Selected file:">
+         <font>
+            <Font name="Courier" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbCrypt" layoutX="215.0" layoutY="318.0" mnemonicParsing="false" onAction="#chooseCryptOrDecrypt" prefHeight="27.0" prefWidth="160.0" selected="true" text="Crypt">
+         <font>
+            <Font name="Courier" size="21.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="CryptOrDecryptRadioButton" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbDecrypt" layoutX="382.0" layoutY="318.0" mnemonicParsing="false" onAction="#chooseCryptOrDecrypt" prefHeight="27.0" prefWidth="139.0" text="Decrypt" toggleGroup="$CryptOrDecryptRadioButton">
+         <font>
+            <Font name="Courier" size="21.0" />
+         </font>
+      </RadioButton>
+      <Button fx:id="nextToStage2Button" disable="true" layoutX="314.0" layoutY="405.0" mnemonicParsing="false" onAction="#switchToNextScene" prefHeight="43.0" prefWidth="86.0" text="Next">
+         <font>
+            <Font name="Courier" size="23.0" />
+         </font>
+      </Button>
+      <TextField fx:id="selectedFileField" alignment="CENTER" editable="false" layoutX="104.0" layoutY="214.0" prefHeight="25.0" prefWidth="505.0">
+         <font>
+            <Font name="Courier" size="13.0" />
+         </font></TextField>
+      <Line endX="533.1397094726562" layoutX="146.0" layoutY="38.0" startX="-100.0" />
+      <Label fx:id="fileList1" alignment="CENTER" contentDisplay="CENTER" layoutX="183.0" layoutY="277.0" prefHeight="22.0" prefWidth="360.0" text="Select an action with text">
+         <font>
+            <Font name="Courier" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

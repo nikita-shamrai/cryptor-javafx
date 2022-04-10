@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="720.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cryptorjfxv2.Controller1">
+   <children>
+      <Button fx:id="backHomeFromSceneOfDecryptButton" layoutX="35.0" layoutY="396.0" mnemonicParsing="false" onAction="#backHomeFromSceneOfDecryptButtonAction" prefHeight="39.0" prefWidth="83.0" text="Back">
+         <font>
+            <Font name="Courier" size="19.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="33.0" layoutY="11.0" prefHeight="17.0" prefWidth="722.0" text="DECRYPT File">
+         <font>
+            <Font name="Courier" size="28.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="48.0" layoutY="94.0" prefHeight="80.0" prefWidth="645.0" text="Select Manual Key - if you know an OFFSET Key which was used to crypt your source text.&#10;Select Brute Force - if you don't know your OFFSET Key. CRYPTOR will try to find the correct result." wrapText="true">
+         <font>
+            <Font name="Courier" size="15.0" />
+         </font>
+      </TextArea>
+      <Label alignment="CENTER" layoutX="35.0" layoutY="57.0" prefHeight="17.0" prefWidth="722.0" text="Choose method of decryption">
+         <font>
+            <Font name="Courier Bold" size="21.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rbManualKey" layoutX="187.0" layoutY="205.0" mnemonicParsing="false" onAction="#manualOffsetKeyChooserDecrypt" prefHeight="28.0" prefWidth="193.0" selected="true" text="Manual Key">
+         <font>
+            <Font name="Courier" size="21.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="DecryptButtonGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rbBruteForce" layoutX="414.0" layoutY="205.0" mnemonicParsing="false" onAction="#bruteForceMethodChosen" prefHeight="27.0" prefWidth="191.0" text="Brute Force" toggleGroup="$DecryptButtonGroup">
+         <font>
+            <Font name="Courier" size="20.0" />
+         </font>
+      </RadioButton>
+      <Slider fx:id="sliderOffsetKeyChooser" blockIncrement="1.0" layoutX="185.0" layoutY="258.0" majorTickUnit="7.0" max="78.0" min="1.0" minorTickCount="5" onMouseClicked="#sliderValueOnMouseClickDecrypt" onMouseDragged="#sliderValueOnMouseClickDecrypt" onMousePressed="#sliderValueOnMouseClickDecrypt" prefHeight="34.0" prefWidth="396.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Label layoutX="263.0" layoutY="324.0" text="Your OFFSET Key is:">
+         <font>
+            <Font name="Courier" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="offsetKeyValue" layoutX="473.0" layoutY="318.0" prefHeight="30.0" prefWidth="48.0" text="-">
+         <font>
+            <Font name="Courier Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="decryptStartButton" disable="true" layoutX="304.0" layoutY="388.0" mnemonicParsing="false" onAction="#startDecryptButtonAction" text="DECRYPT!">
+         <font>
+            <Font name="Courier" size="30.0" />
+         </font>
+      </Button>
+      <Line endX="533.1397094726562" layoutX="155.0" layoutY="43.0" startX="-100.0" />
+   </children>
+</AnchorPane>
